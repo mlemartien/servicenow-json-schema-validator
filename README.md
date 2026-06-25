@@ -130,10 +130,15 @@ var schema = {
                 "type": "string",
                 "maxLength": 160
             },
-            "priority": {
+            "impact": {
                 "type": "integer",
                 "minimum": 1,
-                "maximum": 5
+                "maximum": 3
+            },
+            "urgency": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
             },
             "category": {
                 "type": "string",
@@ -183,7 +188,8 @@ var schema = {
 {
   "caller_id": "Abel Tuter",
   "short_description": "Cannot connect to VPN",
-  "priority": 2,
+  "impact": 2,
+  "urgency": 1,
   "category": "network"
 }
 ```

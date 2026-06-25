@@ -79,7 +79,7 @@ You have a Scripted REST API that creates an Incident. You want to enforce that 
 
 - Is a JSON object
 - Has `caller_id` and `short_description` (required)
-- Has an `impact` and an `impact` that is an integer between 1 and 5
+- Has an `impact` and an `urgency` that is an integer between 1 and 5
 - Has a `category` that is one of a fixed set of allowed values
 - Does not include any unexpected extra properties
 

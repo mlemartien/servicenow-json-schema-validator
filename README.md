@@ -79,7 +79,7 @@ You have a Scripted REST API that creates an Incident. You want to enforce that 
 
 - Is a JSON object
 - Has `caller_id` and `short_description` (required)
-- Has a `priority` that is an integer between 1 and 5
+- Has an `impact` and an `impact` that is an integer between 1 and 5
 - Has a `category` that is one of a fixed set of allowed values
 - Does not include any unexpected extra properties
 
@@ -99,10 +99,15 @@ var schema = {
       "type": "string",
       "maxLength": 160
     },
-    "priority": {
-      "type": "integer",
-      "minimum": 1,
-      "maximum": 5
+    "impact": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 3
+    },
+    "urgency": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 3
     },
     "category": {
       "type": "string",
@@ -168,7 +173,8 @@ var schema = {
     inc.initialize();
     inc.caller_id.setDisplayValue(payload.caller_id);
     inc.short_description = payload.short_description;
-    if (payload.priority) inc.priority = payload.priority;
+    if (payload.impact) inc.impact = payload.impact;
+    if (payload.urgency) inc.urgency = payload.urgency;
     if (payload.category) inc.category = payload.category;
     inc.insert();
 

@@ -1,4 +1,4 @@
-# JsonSchemaValidator — ServiceNow Script Include
+# JsonSchemaValidator — Get your JSON payloads back on track!
 
 A lightweight JSON Schema validation Script Include for ServiceNow, ported from the [tv4](https://github.com/geraintluff/tv4) library. Drop it into any instance and start validating incoming REST API payloads against a JSON Schema in seconds.
 
